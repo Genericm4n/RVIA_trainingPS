@@ -7,6 +7,7 @@ public class SceneManagerController : MonoBehaviour
 {
     private void Start()
     {
+        // iniciar um coroutine que carregara a cena inicial apos 2 segundos
         StartCoroutine("LoadScene");
     }
 
@@ -14,6 +15,7 @@ public class SceneManagerController : MonoBehaviour
     {
         yield return new WaitForSeconds(2.0f);
 
+        // carregar a proxima cena
         SceneManager.LoadScene("_A");
     }
 }
